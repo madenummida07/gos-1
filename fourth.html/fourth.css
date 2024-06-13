@@ -1,0 +1,358 @@
+/* General styles */
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --black: #0000;
+  --white: #fff;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--white);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.container h2 {
+  color: black;
+}
+
+header {
+  background: var(--white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+}
+
+header nav ul li {
+  margin: 0;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+header nav ul li a:hover {
+  background: var(--white);
+}
+
+header #darkModeToggle {
+  padding: 0.5rem 1rem;
+  background: #333;
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+header #darkModeToggle:hover {
+  background: #444;
+}
+
+.hero {
+  background: url("c:\Users\Админ\Downloads\evening-in-karaganda-kazakhstan-1.jpg")
+    no-repeat center center/cover;
+  color: black;
+  text-align: center;
+  padding: 8rem 1rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero .cta {
+  padding: 0.75rem 1.5rem;
+  background: #2881e1;
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.1s ease-in-out;
+}
+
+.hero .cta:hover {
+  background: #073c75;
+  transition: 0.5ms ease-in;
+}
+
+.clients {
+  position: relative;
+}
+
+.slider {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.slide {
+  display: inline-block;
+  width: 100%;
+}
+
+.clients img {
+  max-width: 100%;
+  height: auto;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  color: #333;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.services,
+.contact,
+.case-studies,
+.tabs {
+  padding: 4rem 1rem;
+  background: var(--white);
+  text-align: center;
+}
+
+.services h2,
+.contact h2,
+.case-studies h2,
+.tabs h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.services .service,
+.case-studies .case-study,
+.tabcontent {
+  padding: 2rem;
+  background: #f5f5f5;
+  margin: 1rem 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.services .service h3,
+.case-studies .case-study h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background: #333;
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 4px;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+  text-align: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background-color: var(--black);
+  color: var(--black);
+}
+
+body.dark-mode header {
+  background: #333;
+}
+
+body.dark-mode header .logo,
+body.dark-mode header nav ul li a {
+  color: var(--white);
+}
+
+body.dark-mode header nav ul li a:hover {
+  background: #444;
+}
+
+body.dark-mode header #darkModeToggle {
+  background: var(--white);
+  color: #333;
+}
+
+body.dark-mode header #darkModeToggle:hover {
+  background: var(--white);
+}
+
+body.dark-mode .hero {
+  background: url("images/hero-bg-dark.jpg") no-repeat center center/cover;
+}
+
+body.dark-mode .services .service,
+body.dark-mode .case-studies .case-study,
+body.dark-mode .tabcontent {
+  background: #333;
+  color: var(--white);
+}
+
+body.dark-mode footer {
+  background: black;
+}
+
+body.dark-mode .modal-content {
+  background: #333;
+  color: var(--white);
+}
+
+body.dark-mode .close-button {
+  color: var(--white);
+}
+
+/* Media Queries */
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 6rem 1rem;
+  }
+
+  .clients {
+    padding: 3rem 0;
+  }
+
+  .services,
+  .contact,
+  .case-studies,
+  .tabs {
+    padding: 2rem 1rem;
+  }
+
+  .services .service,
+  .case-studies .case-study,
+  .tabcontent {
+    margin: 1rem 0;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+}
+
+/* Media Queries */
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .logo {
+    margin-bottom: 1rem;
+  }
+
+  header nav {
+    margin-top: 1rem;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav ul li {
+    margin: 0.5rem 0;
+  }
+}
+
+/* For screens smaller than 576px */
+@media screen and (max-width: 576px) {
+  header nav ul {
+    gap: 0.5rem;
+  }
+
+  header nav ul li a {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}

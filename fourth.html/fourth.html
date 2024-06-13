@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="fourth.css" />
+    <script defer src="fourth.js"></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js"
+    ></script>
+    <script defer src="js/firebaseConfig.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">WizardZ</div>
+        <nav>
+          <ul>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#quote">Request a quote</a></li>
+            <li><a href="#use-cases">Use Cases</a></li>
+          </ul>
+        </nav>
+        <button id="darkModeToggle">Mode</button>
+      </div>
+    </header>
+    <main>
+      <section id="about" class="hero">
+        <div class="container">
+          <h1>Navigating the digital landscape for success</h1>
+          <p>
+            Our digital marketing agency helps businesses grow and succeed
+            online through a range of services including SEO, PPC, social media
+            marketing, and content creation.
+          </p>
+          <button class="cta">Book a consultation</button>
+        </div>
+      </section>
+
+      <section id="clients" class="clients">
+        <div class="container">
+          <div class="slider">
+            <div class="slide">
+              <img
+                src="c:\Users\Админ\Downloads\pexels-natalie-bond-3569706.jpg"
+                alt="Client 1"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="c:\Users\Админ\Downloads\pexels-natalie-bond-3569706.jpg"
+                alt="Client 2"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="c:\Users\Админ\Downloads\pexels-valeria-boltneva-1860208.jpg"
+                alt="Client 3"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="c:\Users\Админ\Downloads\pexels-roman-odintsov-4552131.jpg"
+                alt="Client 4"
+              />
+            </div>
+          </div>
+          <button class="prev" onclick="prevSlide()">&#10094;</button>
+          <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+      </section>
+
+      <section id="services" class="services">
+        <div class="container">
+          <h2>Services</h2>
+          <div class="service">
+            <h3>Search engine optimization</h3>
+            <p>Learn more</p>
+          </div>
+          <div class="service">
+            <h3>Pay per click advertising</h3>
+            <p>Learn more</p>
+          </div>
+          <div class="service">
+            <h3>Social media marketing</h3>
+            <p>Learn more</p>
+          </div>
+          <div class="service">
+            <h3>E-mail marketing</h3>
+            <p>Learn more</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="tabs" class="tabs">
+        <div class="container">
+          <h2>Tabbed Content</h2>
+          <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Tab1')">
+              Tab 1
+            </button>
+            <button class="tablinks" onclick="openTab(event, 'Tab2')">
+              Tab 2
+            </button>
+            <button class="tablinks" onclick="openTab(event, 'Tab3')">
+              Tab 3
+            </button>
+          </div>
+          <div id="Tab1" class="tabcontent">
+            <h3>Tab 1</h3>
+            <p>Content for Tab 1.</p>
+          </div>
+          <div id="Tab2" class="tabcontent">
+            <h3>Tab 2</h3>
+            <p>Content for Tab 2.</p>
+          </div>
+          <div id="Tab3" class="tabcontent">
+            <h3>Tab 3</h3>
+            <p>Content for Tab 3.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="quote" class="contact">
+        <div class="container">
+          <h2>Let's make things happen</h2>
+          <button class="cta">Get your free proposal</button>
+        </div>
+      </section>
+
+      <section id="use-cases" class="case-studies">
+        <div class="container">
+          <h2>Case Study</h2>
+          <div class="case-study">
+            <h3>For a local restaurant</h3>
+            <p>
+              Implemented a strategic SEO plan resulting in a 50% increase in
+              organic traffic and a 20% increase in sales.
+            </p>
+          </div>
+          <div class="case-study">
+            <h3>For a B2B software company</h3>
+            <p>
+              Developed an AI-driven PPC strategy leading to a 30% increase in
+              leads and a 15% increase in organic traffic.
+            </p>
+          </div>
+          <div class="case-study">
+            <h3>For a national retail chain</h3>
+            <p>
+              Executed a content marketing strategy that generated 2,000 new
+              leads, resulting in a 25% increase in sales.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 WizardZ</p>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Modal Title</h2>
+        <p>This is a modal window.</p>
+      </div>
+    </div>
+  </body>
+</html>
